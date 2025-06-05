@@ -1,0 +1,243 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #D4AF37; /* Dourado */
+    --secondary-color: #1a1a1a; /* Preto */
+    --text-light: #ffffff; /* Branco */
+    --text-dark: #333333; /* Cinza escuro */
+    --bg-dark: #0a0a0a; /* Preto mais escuro para o fundo */
+}
+
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    padding-top: 76px; /* Altura da navbar fixa */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #f1c40f;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Seções */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Cards de áreas de atuação */
+.area-card {
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.area-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Formulário de contato */
+.contact-form .form-control {
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid var(--primary-color);
+    color: var(--text-light);
+    border-radius: 0;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-control:focus {
+    background-color: rgba(26, 26, 26, 0.9);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    color: var(--text-light);
+}
+
+.contact-form textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-gold {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #f1c40f;
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Depoimentos */
+.testimonial-card {
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid var(--primary-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.testimonial-rating {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .navbar-collapse {
+        background-color: var(--secondary-color);
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+}
+
+/* Seção de Descrição de Fatos */
+#descricao-fatos {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../img/estatua-justica.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#descricao-fatos .section-title {
+    margin-bottom: 40px;
+}
+
+#descricao-fatos h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+#descricao-fatos h6 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+#descricao-fatos .text-gold {
+    color: var(--primary-color);
+}
+
+#descricao-fatos .text-muted {
+    color: #aaa !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+#descricao-fatos .btn-gold {
+    background-color: var(--primary-color);
+    color: #000;
+    font-weight: 600;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+#descricao-fatos .btn-gold:hover {
+    background-color: #f1c40f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
