@@ -42,12 +42,7 @@ Advogado/
 - Seção de depoimentos
 - Animações suaves
 
-## Próximos Passos
 
-- [ ] Adicionar mais páginas conforme necessário
-- [ ] Implementar backend para o formulário de contato
-- [ ] Otimização para SEO
-- [ ] Testes em diferentes navegadores
 
 ## Licença
 
